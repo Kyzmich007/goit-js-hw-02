@@ -8,7 +8,9 @@ do {
     input = 0;
     alert("Было введено не число, попробуйте еще раз");
   }
-  numbers.push(input);
+  if (input !== null && input !== 0) {
+    numbers.push(input);
+  }
 } while (input !== null);
 const countTheSum = function (array) {
   for (let figure of numbers) {
@@ -16,5 +18,6 @@ const countTheSum = function (array) {
   }
   return total;
 };
+console.log(numbers);
 countTheSum(numbers);
 console.log(`Общая сумма чисел равна ${total}`);

@@ -5,7 +5,7 @@ const checkForSpam = function (message) {
   let result;
   for (const banWord of banWords) {
     result = inputText.includes(banWord.toLowerCase());
-    if (result === true) {
+    if (result) {
       return result;
     }
   }
